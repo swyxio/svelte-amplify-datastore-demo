@@ -3,37 +3,21 @@ import Amplify, { Hub } from '@aws-amplify/core';
 import { DataStore, Predicates } from '@aws-amplify/datastore';
 import { Note } from '../models';
 
-Hub.listen('auth', (data) => {
-  if (data.payload.event === 'signOut') {
-    DataStore.clear();
-  }
-});
-const subscription = DataStore.observe(Note).subscribe((subscriptionMsg) => {
-  console.log({ subscriptionMsg });
-  listNotes();
-});
+const subscription = DataStore.observe(Note).subscribe(listNotes);
 const handleConnectionChange = () => {
   const condition = navigator.onLine ? 'online' : 'offline';
-  console.log({ condition });
   if (condition === 'online') listNotes();
 };
 window.addEventListener('online', handleConnectionChange);
-window.addEventListener('offline', handleConnectionChange);
-
-export const store = writable([], () => {
-  console.log('got a subscriber');
-  return () => {
-    console.log('no more subscribers');
-    subscription.unsubscribe();
-  };
+Hub.listen('auth', (data) => {
+  if (data.payload.event === 'signOut') DataStore.clear();
 });
-listNotes(); // load for the first time
+
+export const store = writable([], () => subscription.unsubscribe);
 export async function updateNote(id) {
   const original = await DataStore.query(Note, id);
   await DataStore.save(
-    Note.copyOf(original, (updated) => {
-      updated.note = value;
-    })
+    Note.copyOf(original, (updated) => void (updated.note = value))
   );
   return listNotes();
 }
@@ -46,15 +30,11 @@ export async function searchNotes(searchStr) {
     store.set
   );
 }
-export async function addNote(note /* string */) {
-  console.log('add note', note);
+export async function addNote(note) {
   await DataStore.save(new Note({ note }));
   return listNotes();
 }
 
 export async function listNotes() {
-  return DataStore.query(Note, Predicates.ALL).then((v) => {
-    console.log('listNotes', v);
-    store.set(v);
-  });
+  return DataStore.query(Note, Predicates.ALL).then(store.set);
 }

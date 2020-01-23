@@ -1,8 +1,12 @@
 <script>
   import { store as authStore, logout } from './stores/auth.js'
   import { store, addNote, searchNotes, listNotes, updateNote, deleteNote } from './stores/data.js'
+  import { onMount } from 'svelte';
   import "bootstrap/dist/css/bootstrap.min.css";
 
+  onMount(listNotes);
+  let notes = []
+  store.subscribe(_notes => void (notes = _notes))
   let displayAdd = true
   let displaySearch = false
   let displayUpdate = false
@@ -10,9 +14,8 @@
   let id = ""
   const resetValue = () => value = ""
   let promise
-  function handleAddNote() {
-    promise = addNote(value).then(resetValue)
-  }
+  const handleAddNote = () => void(promise = addNote(value).then(resetValue))
+  const handleUpdateNote = () => id !== "" && void (promise = updateNote())
   function handleSearch() {
     displaySearch = true
     promise = searchNotes(value)
@@ -21,32 +24,15 @@
     displaySearch = false;
     listNotes().then(resetValue)
   }
-  function handleUpdateNote() {
-    if (id !== "") {
-      promise = updateNote()
-    }
-  }
   async function handleSelect(note) {
     value = note.note
     id = note.id
     displayUpdate = true
     displayAdd = false
   }
-  let notes = []
-  store.subscribe(_notes => {
-    notes = _notes
-  })
-  authStore.subscribe(user => {
-    console.log({user})
-  })
 </script>
-<style>
-  /* pre {
-    text-align: left
-  } */
-</style>
 
-<h2>You are logged in <button type="button" on:click={logout}>Log Out</button></h2>
+<h2>You are logged in as {$authStore.username} <button type="button" on:click={logout}>Log Out</button></h2>
 
 <div class="container">
   {#if displayAdd}
@@ -86,20 +72,14 @@
       {item.note}
     </span>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close" 
-    on:click={()=> {deleteNote(item.id).then(listNotes)}} >
+      on:click={()=> {deleteNote(item.id).then(listNotes)}} >
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   {/each}
   {#if displaySearch}
-  <button class="button btn-warning float-right text-white font-weight-bold" 
-    on:click={clearSearch}>
+  <button class="button btn-warning float-right text-white font-weight-bold" on:click={clearSearch}>
     <span aria-hidden="true">Clear Search</span>
   </button>
   {/if}
 </div>
-{#await promise}
-  <p>Work work...</p>
-{:catch error}
-  <p class="errorMessage">Something went wrong: {error.message}</p>
-{/await}
