@@ -33,7 +33,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-my-svelte-project-tempwodijw-123342-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apiamplifyDatasource"
 			},
-			"lastPushTimeStamp": "2020-01-22T19:35:45.171Z",
+			"lastPushTimeStamp": "2020-01-23T01:03:35.595Z",
 			"lastPushDirHash": "gjLWX4C3lXi8JbYgU8ueoNdIn+k="
 		}
 	},
@@ -46,7 +46,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-my-svelte-project-tempwodijw-123342-deployment/amplify-cfn-templates/auth/mysvelteproject250bd066-cloudformation-template.yml",
 				"logicalId": "authmysvelteproject250bd066"
 			},
-			"lastPushTimeStamp": "2020-01-22T19:35:45.189Z",
+			"lastPushTimeStamp": "2020-01-23T01:03:35.596Z",
 			"output": {
 				"AppClientSecret": "13ice57fvu6ipjn7bu5cs4rmpokcln46jni6t452aqtjaavq0ur6",
 				"UserPoolId": "us-east-1_mAXw64q4s",
@@ -60,6 +60,28 @@
 			},
 			"lastPushDirHash": "FKO9TkLQI72bHDHuaOw7rtJywbc=",
 			"customAuth": false
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-my-svelte-project-tempwodijw-123342-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2020-01-23T01:03:35.599Z",
+			"output": {
+				"CloudFrontSecureURL": "https://d1tdmagl19vwso.cloudfront.net",
+				"S3BucketSecureURL": "https://my-svelte-project-20200122193249-hostingbucket-tempwodijw.s3.amazonaws.com",
+				"CloudFrontOriginAccessIdentity": "E2SVVHHJQ8GC0S",
+				"WebsiteURL": "http://my-svelte-project-20200122193249-hostingbucket-tempwodijw.s3-website-us-east-1.amazonaws.com",
+				"CloudFrontDistributionID": "EEWH9L60P7IGT",
+				"Region": "us-east-1",
+				"HostingBucketName": "my-svelte-project-20200122193249-hostingbucket-tempwodijw",
+				"CloudFrontDomainName": "d1tdmagl19vwso.cloudfront.net"
+			},
+			"lastPushDirHash": "N+VO4CejvQ8epDWHdcrQWHq3j/s="
 		}
 	}
 }
