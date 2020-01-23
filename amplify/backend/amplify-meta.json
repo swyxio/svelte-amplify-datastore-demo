@@ -1,65 +1,76 @@
 {
-	"providers": {
-		"awscloudformation": {
-			"AuthRoleName": "amplify-my-svelte-project-tempwodijw-123342-authRole",
-			"UnauthRoleArn": "arn:aws:iam::195258942509:role/amplify-my-svelte-project-tempwodijw-123342-unauthRole",
-			"AuthRoleArn": "arn:aws:iam::195258942509:role/amplify-my-svelte-project-tempwodijw-123342-authRole",
-			"Region": "us-east-1",
-			"DeploymentBucketName": "amplify-my-svelte-project-tempwodijw-123342-deployment",
-			"UnauthRoleName": "amplify-my-svelte-project-tempwodijw-123342-unauthRole",
-			"StackName": "amplify-my-svelte-project-tempwodijw-123342",
-			"StackId": "arn:aws:cloudformation:us-east-1:195258942509:stack/amplify-my-svelte-project-tempwodijw-123342/56f7ef10-3d3d-11ea-b84e-12da3ecd6186",
-			"AmplifyAppId": "dsw4gfc33xhg7"
-		}
-	},
-	"api": {
-		"amplifyDatasource": {
-			"service": "AppSync",
-			"providerPlugin": "awscloudformation",
-			"output": {
-				"authConfig": {
-					"additionalAuthenticationProviders": [],
-					"defaultAuthentication": {
-						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
-						"userPoolConfig": {
-							"userPoolId": "authmysvelteproject250bd066"
-						}
-					}
-				},
-				"GraphQLAPIIdOutput": "nj5hxymkvzh6vmv22xctmc6okq",
-				"GraphQLAPIEndpointOutput": "https://uzfluvtiezeszlxkogm2a4l7kq.appsync-api.us-east-1.amazonaws.com/graphql"
-			},
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/amplify-my-svelte-project-tempwodijw-123342-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-				"logicalId": "apiamplifyDatasource"
-			},
-			"lastPushTimeStamp": "2020-01-22T19:35:45.171Z",
-			"lastPushDirHash": "gjLWX4C3lXi8JbYgU8ueoNdIn+k="
-		}
-	},
-	"auth": {
-		"mysvelteproject250bd066": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": [],
-			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/amplify-my-svelte-project-tempwodijw-123342-deployment/amplify-cfn-templates/auth/mysvelteproject250bd066-cloudformation-template.yml",
-				"logicalId": "authmysvelteproject250bd066"
-			},
-			"lastPushTimeStamp": "2020-01-22T19:35:45.189Z",
-			"output": {
-				"AppClientSecret": "13ice57fvu6ipjn7bu5cs4rmpokcln46jni6t452aqtjaavq0ur6",
-				"UserPoolId": "us-east-1_mAXw64q4s",
-				"AppClientIDWeb": "7023mc8m52spi3aklq04n8u2be",
-				"AppClientID": "5toh629497hndq5vofb4nmi5bi",
-				"IdentityPoolId": "us-east-1:a631ae37-6fab-46d5-ac9d-f76503d81cf7",
-				"IdentityPoolName": "mysvelteproject250bd066_identitypool_250bd066__tempwodijw",
-				"UserPoolName": "mysvelteproject250bd066_userpool_250bd066",
-				"HostedUIDomain": "mysvelteprojectaa3cccfd-aa3cccfd-tempwodijw",
-				"OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:8080/\"],\"LogoutURLs\":[\"http://localhost:8080/\"]}"
-			},
-			"lastPushDirHash": "FKO9TkLQI72bHDHuaOw7rtJywbc=",
-			"customAuth": false
-		}
-	}
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-my-svelte-project-tempwodijw-123342-authRole",
+            "UnauthRoleArn": "arn:aws:iam::195258942509:role/amplify-my-svelte-project-tempwodijw-123342-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::195258942509:role/amplify-my-svelte-project-tempwodijw-123342-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-my-svelte-project-tempwodijw-123342-deployment",
+            "UnauthRoleName": "amplify-my-svelte-project-tempwodijw-123342-unauthRole",
+            "StackName": "amplify-my-svelte-project-tempwodijw-123342",
+            "StackId": "arn:aws:cloudformation:us-east-1:195258942509:stack/amplify-my-svelte-project-tempwodijw-123342/56f7ef10-3d3d-11ea-b84e-12da3ecd6186",
+            "AmplifyAppId": "dsw4gfc33xhg7"
+        }
+    },
+    "api": {
+        "amplifyDatasource": {
+            "service": "AppSync",
+            "providerPlugin": "awscloudformation",
+            "output": {
+                "authConfig": {
+                    "additionalAuthenticationProviders": [],
+                    "defaultAuthentication": {
+                        "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+                        "userPoolConfig": {
+                            "userPoolId": "authmysvelteproject250bd066"
+                        }
+                    }
+                },
+                "GraphQLAPIIdOutput": "nj5hxymkvzh6vmv22xctmc6okq",
+                "GraphQLAPIEndpointOutput": "https://uzfluvtiezeszlxkogm2a4l7kq.appsync-api.us-east-1.amazonaws.com/graphql"
+            },
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-my-svelte-project-tempwodijw-123342-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+                "logicalId": "apiamplifyDatasource"
+            },
+            "lastPushTimeStamp": "2020-01-23T00:32:54.670Z",
+            "lastPushDirHash": "gjLWX4C3lXi8JbYgU8ueoNdIn+k="
+        }
+    },
+    "auth": {
+        "mysvelteproject250bd066": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [],
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-my-svelte-project-tempwodijw-123342-deployment/amplify-cfn-templates/auth/mysvelteproject250bd066-cloudformation-template.yml",
+                "logicalId": "authmysvelteproject250bd066"
+            },
+            "lastPushTimeStamp": "2020-01-23T00:32:54.673Z",
+            "output": {
+                "AppClientSecret": "13ice57fvu6ipjn7bu5cs4rmpokcln46jni6t452aqtjaavq0ur6",
+                "UserPoolId": "us-east-1_mAXw64q4s",
+                "AppClientIDWeb": "7023mc8m52spi3aklq04n8u2be",
+                "AppClientID": "5toh629497hndq5vofb4nmi5bi",
+                "IdentityPoolId": "us-east-1:a631ae37-6fab-46d5-ac9d-f76503d81cf7",
+                "IdentityPoolName": "mysvelteproject250bd066_identitypool_250bd066__tempwodijw",
+                "UserPoolName": "mysvelteproject250bd066_userpool_250bd066",
+                "HostedUIDomain": "mysvelteprojectaa3cccfd-aa3cccfd-tempwodijw",
+                "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:8080/\"],\"LogoutURLs\":[\"http://localhost:8080/\"]}"
+            },
+            "lastPushDirHash": "FKO9TkLQI72bHDHuaOw7rtJywbc=",
+            "customAuth": false
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "service": "S3AndCloudFront",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-my-svelte-project-tempwodijw-123342-deployment/amplify-cfn-templates/hosting/template.json",
+                "logicalId": "hostingS3AndCloudFront"
+            },
+            "lastPushTimeStamp": "2020-01-23T00:32:56.064Z"
+        }
+    }
 }

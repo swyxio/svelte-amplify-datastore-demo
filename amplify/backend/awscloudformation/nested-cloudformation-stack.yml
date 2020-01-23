@@ -142,6 +142,16 @@
 				}
 			}
 		},
+		"hostingS3AndCloudFront": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/amplify-my-svelte-project-tempwodijw-123342-deployment/amplify-cfn-templates/hosting/template.json",
+				"Parameters": {
+					"bucketName": "my-svelte-project-20200122193249-hostingbucket",
+					"env": "tempwodijw"
+				}
+			}
+		},
 		"UpdateRolesWithIDPFunction": {
 			"DependsOn": [
 				"AuthRole",
