@@ -9,6 +9,15 @@ work in progress: the data store part is yet to be coded. it only does auth for 
 ![image](https://user-images.githubusercontent.com/6764957/72947142-2030c800-3d4f-11ea-8095-cd1df9d3920e.png)
 
 
+## Offline first
+
+![sveltedatastore](https://user-images.githubusercontent.com/6764957/73031770-05238e00-3e0b-11ea-8bf8-67ca0f844c2c.gif)
+
+## Blogposts
+
+- https://www.swyx.io/writing/svelte-auth
+- https://www.swyx.io/writing/svelte-amplify-datastore
+
 ## Resources used
 
 - https://github.com/aws-amplify/amplify-js
