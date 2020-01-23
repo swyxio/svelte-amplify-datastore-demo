@@ -1,5 +1,5 @@
 <script>
-  import { store, signUp, signIn, confirmSignUp, loginFormState } from './auth.js'
+  import { store, signUp, signIn, confirmSignUp, loginFormState } from './stores/auth.js'
   let mode = localStorage.getItem('svelteLoginMode') || 'signup'
   let isSigningIn = mode === 'signin'
   let promise // nothing to start with

@@ -25,6 +25,7 @@
         "@aws-amplify/core": "^2.2.2",
         "@aws-amplify/datastore": "^1.0.4",
         "aws-amplify": "^2.2.2",
+        "bootstrap": "^4.4.1",
         "sirv-cli": "^0.4.4"
     },
     "description": "*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*",

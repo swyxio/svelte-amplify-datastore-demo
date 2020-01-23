@@ -2,7 +2,7 @@
 	export let name;
 	import Login from './Login.svelte'
 	import Main from './Main.svelte'
-	import { store } from './auth.js'
+	import { store } from './stores/auth.js'
 </script>
 
 <main>
