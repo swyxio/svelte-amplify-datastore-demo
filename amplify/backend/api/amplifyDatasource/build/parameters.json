@@ -1,0 +1,14 @@
+{
+    "CreateAPIKey": 0,
+    "AppSyncApiName": "amplifyDatasource",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authmysvelteproject250bd066",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-my-svelte-project-tempwodijw-123342-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/fa79b86155fd286386c05d17eab07d56544354f0"
+}

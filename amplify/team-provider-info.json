@@ -1,0 +1,22 @@
+{
+    "tempwodijw": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-my-svelte-project-tempwodijw-123342-authRole",
+            "UnauthRoleArn": "arn:aws:iam::195258942509:role/amplify-my-svelte-project-tempwodijw-123342-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::195258942509:role/amplify-my-svelte-project-tempwodijw-123342-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-my-svelte-project-tempwodijw-123342-deployment",
+            "UnauthRoleName": "amplify-my-svelte-project-tempwodijw-123342-unauthRole",
+            "StackName": "amplify-my-svelte-project-tempwodijw-123342",
+            "StackId": "arn:aws:cloudformation:us-east-1:195258942509:stack/amplify-my-svelte-project-tempwodijw-123342/56f7ef10-3d3d-11ea-b84e-12da3ecd6186",
+            "AmplifyAppId": "dsw4gfc33xhg7"
+        },
+        "categories": {
+            "auth": {
+                "mysvelteproject250bd066": {
+                    "hostedUIProviderCreds": "[{\"ProviderName\":\"LoginWithAmazon\",\"client_id\":\"tempappid\",\"client_secret\":\"tempappsecret\"}]"
+                }
+            }
+        }
+    }
+}
