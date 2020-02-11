@@ -2,7 +2,7 @@
 
 this repo show how to use svelte with amplify data store. 
 
-work in progress: the data store part is yet to be coded. it only does auth for now.
+since this was first open sourced, the data store part has been added.
 
 ## deployed at https://d1tdmagl19vwso.cloudfront.net/
 
